@@ -257,7 +257,7 @@ class VPs:
 
     def merge_arc(self, a, b):  # 重写！！！
         # 弧不遮挡
-        if a[-1][2] <= b[0][2]:
+        if a[-1][2] <= b[0][2] + self.err:
             return np.concatenate((a, b), axis=0)
             # return np.append(a, b, axis=0)
 
